@@ -29,21 +29,21 @@ const dataOne = [
   
 // J'essaye autre chose
 
-function Yahtzee {
-    it('Test One', () =>{
-        int tab:Array<number> = {1,4,5,1,1}
-        int value = Yahtzee.isOne(tab)
-        assert.equal(3,value);
-    });
-    it('Test Two', () =>{
-        int tab:Array<number> = {2,5,3,2,2}
-        int value = Yahtzee.isTwo(tab)
-        assert.equal(6,value);
-    });
-    it('Test Three', () =>{
-        int tab:Array<number> = {3,5,3,3,3}
-        int value = Yahtzee.isThree(tab)
-        assert.equal(12,value);
-    });    
+// function Yahtzee {
+//     it('Test One', () =>{
+//         int tab:Array<number> = {1,4,5,1,1}
+//         int value = Yahtzee.isOne(tab)
+//         assert.equal(3,value);
+//     });
+//     it('Test Two', () =>{
+//         int tab:Array<number> = {2,5,3,2,2}
+//         int value = Yahtzee.isTwo(tab)
+//         assert.equal(6,value);
+//     });
+//     it('Test Three', () =>{
+//         int tab:Array<number> = {3,5,3,3,3}
+//         int value = Yahtzee.isThree(tab)
+//         assert.equal(12,value);
+//     }); 
      
-    }
+//     }
