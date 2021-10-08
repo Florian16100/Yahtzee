@@ -9,14 +9,19 @@ const data = [
         sides: [2, 2, 3, 4, 5],
         result: 0,
     },
+    {
+        sides: [1, 1, 3, 4, 5],
+        result: 0,
+    },
   ];
 
   describe.each(data)(`nombre de un `, (one) => {
     it(`le résultat ${one.sides} correspond à ${one.result}`, () => {
-      const result = firstLancerOne(...one.sides);
+      const result = firstLancerOne(one.sides);
 
       expect(result).toBe(one.result);
     });
   });
 
 
+  

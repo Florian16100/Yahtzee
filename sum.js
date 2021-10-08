@@ -1,5 +1,5 @@
-function firstLancerOne(){
-    if(result = 1){
+function firstLancerOne(result){
+    if(result == 1){
         return 1
     }
     return 0
