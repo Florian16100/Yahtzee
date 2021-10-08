@@ -27,7 +27,7 @@ const dataOne = [
 
 
   
-// J'essaye autre chose
+// J'essaye autre chose  (qui ne marche pas pour l'instant)
 
 // function Yahtzee {
 //     it('Test One', () =>{
