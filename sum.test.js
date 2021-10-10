@@ -6,7 +6,8 @@ const LancerCinq = require("./sum");
 const LancerSix = require("./sum");
 const LancerBrelan = require("./sum");
 const LancerSquare = require("./sum");
-
+const LancerSmallSuite = require("./sum");
+const LancerBigSuite = require("./sum");
 
 const dataOne = [
     {
@@ -63,8 +64,8 @@ const dataOne = [
         result: 0,
     },
     {
-        rolls: [1, 3, 3, 2, 4],
-        result: 6,
+        rolls: [1, 3, 3, 3, 4],
+        result: 9,
     }
   ];
 
@@ -82,12 +83,12 @@ const dataOne = [
         result : 4,
     },
     {
-        rolls: [1, 1, 2, 6, 5],
-        result: 0,
+        rolls: [4, 4, 4, 4, 6],
+        result: 16,
     },
     {
-        rolls: [1, 3, 4, 2, 4],
-        result: 8,
+        rolls: [1, 4, 4, 2, 4],
+        result: 12,
     }
   ];
 
@@ -109,8 +110,8 @@ const dataOne = [
         result: 0,
     },
     {
-        rolls: [1, 3, 5, 2, 5],
-        result: 10,
+        rolls: [5, 3, 5, 2, 5],
+        result: 15,
     }
   ];
 
@@ -123,8 +124,8 @@ const dataOne = [
   
   const dataSix = [
     {
-        rolls: [1, 2, 3, 4, 6],
-        result : 6,
+        rolls: [1, 6, 6, 4, 6],
+        result : 18,
     },
     {
         rolls: [1, 1, 2, 5, 4],
@@ -156,10 +157,6 @@ const dataOne = [
       rolls: [4,2,4,3,4], 
       result: 17
     },
-    {
-      rolls: [6,5,6,2,6], 
-      result: 25
-    }
  ]
  describe.each(dataBrelan)('Résultat pour un Brelan :', ({rolls, result}) => {
      it(`Pour ${rolls} le score est ${result}`, () => {
@@ -176,17 +173,13 @@ const dataOne = [
        result: 0
       },
      {
-       rolls: [1,2,2,2,2], 
-       result: 9
+       rolls: [1,5,5,5,5], 
+       result: 21
       },
      {
-       rolls: [1,1,1,1,1], 
-       result: 5
+       rolls: [3,3,5,3,3], 
+       result: 17
       },
-     {
-       rolls: [3,3,6,3,6], 
-       result: 0
-      }
  ]
  describe.each(dataSquare)('Résultat pour un carré :', ({rolls, result}) => {
      it(`Pour ${rolls} le resultat est ${result}`, () => {
@@ -194,3 +187,46 @@ const dataOne = [
          expect(result).toBe(result);
      });
  });
+
+ const dataSmallSuite = [
+  {
+    rolls: [1, 2, 3, 4, 5], 
+    result: 30
+  },
+  {
+    rolls: [3, 5, 2, 5, 4], 
+    result: 30
+  },
+  {
+    rolls: [6, 5, 6, 4, 1], 
+    result: 0
+  },
+]
+
+describe.each(dataSmallSuite)('Petite suite', ({rolls, result}) => {
+  it(`Pour ${rolls} le resultat est ${result}`, () => {
+      const result = LancerSmallSuite.SmallSuite('Petite suite', rolls)
+      expect(result).toBe(result);
+  });
+});
+
+const dataBigSuite = [
+  {
+    rolls: [1, 2, 3, 4, 5], 
+    result: 40
+  },
+  {
+    rolls: [6, 5, 2, 4, 3], 
+    result: 40
+  },
+  {
+    rolls: [1, 2, 6, 5, 5], 
+    result: 0
+  },
+]
+describe.each(dataBigSuite)('Grande suite', ({rolls, result}) => {
+  it(`Pour ${rolls} le resultat est ${result}`, () => {
+      const result = LancerBigSuite.BigSuite('Grande suite', rolls)
+      expect(result).toBe(result);
+  });
+});

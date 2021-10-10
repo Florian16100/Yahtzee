@@ -44,4 +44,20 @@ module.exports ={
         return (data) => FinalCalcul(data).somme(x => x.count >= rolls);
     },
    
+    SmallSuite: function LancerSmallSuite() {
+        return (data) => ([1,2,3,4].every(i => data.includes(i))) ? 
+                                30 : 
+                                ([2,3,4,5].every(i => data.includes(i))) ? 
+                                    30 : 
+                                    ([3,4,5,6].every(i => data.includes(i))) ? 
+                                        30 : 0;
+    }, 
+        
+    BigSuite: function LancerBigSuite() {
+        return (data) => ([1,2,3,4,5].every(i => data.includes(i))) ? 
+                                40 : 
+                                ([2,3,4,5,6].every(i => data.includes(i))) ? 
+                                    40 : 0;
+    },
+
 }
